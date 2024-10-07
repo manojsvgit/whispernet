@@ -1,0 +1,132 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+    color: #f2f2f2; /* Light text color */
+    margin: 0;
+    padding: 0;
+}
+
+.chat-container {
+    max-width: 500px; /* Increased width */
+    margin: 50px auto;
+    background-color: #2a2a2a; /* Darker container background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5); /* Softer shadow */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Flexbox layout */
+    height: 80vh; /* Adjusted height */
+}
+
+h1 {
+    text-align: center;
+    color: #ffcc00; /* Bright accent color for heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Message Section */
+
+.messages {
+    flex-grow: 1; /* Allow messages to grow */
+    border: 1px solid #444; /* Lighter border for dark theme */
+    border-radius: 5px;
+    overflow-y: auto; /* Smooth scrolling */
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #3b3b3b; /* Dark gray background for messages */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* Inner shadow */
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Column layout for messages */
+}
+
+.message {
+    display: flex; /* Flex layout for each message */
+    align-items: center; /* Center items vertically */
+    margin: 5px 0; /* Space between messages */
+    padding: 10px; /* Increased padding for better touch targets */
+    border-radius: 10px; /* More rounded message bubbles */
+    position: relative; /* Allow positioning of avatar */
+    color: white; /* Default text color */
+}
+
+.message p {
+    margin: 0; /* Remove default margins */
+    padding: 10px; /* Padding for message text */
+    border-radius: 10px; /* Round message bubble corners */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+/* Different colors for sent and received messages */
+.sent {
+    background-color: #007bff; /* Blue for sent messages */
+    color: white;
+    align-self: flex-end; /* Align to the right */
+}
+
+.received {
+    background-color: #444; /* Darker for received messages */
+    color: white;
+    align-self: flex-start; /* Align to the left */
+}
+
+
+/* Avatar styles */
+.avatar {
+    width: 30px; /* Avatar width */
+    height: 30px; /* Avatar height */
+    border-radius: 50%; /* Round avatars */
+    margin-right: 10px; /* Space between avatar and message text */
+    background-color: #ffcc00; /* Placeholder background color */
+    display: flex; /* Center initials */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    color: #000; /* Text color for initials */
+    font-weight: bold; /* Bold initials */
+}
+
+.messages p:hover {
+    background-color: #444; /* Dark hover effect for messages */
+}
+
+input[type="text"] {
+    width: calc(100% - 100px);
+    padding: 10px;
+    border: 1px solid #666; /* Lighter border for dark theme */
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3); /* Inner shadow */
+    margin-right: 10px; /* Space between input and button */
+    background-color: #333; /* Dark background for input */
+    color: #f2f2f2; /* Light text color for input */
+}
+
+input[type="text"]:focus {
+    border-color: #ffcc00; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    padding: 12px 16px; /* Adjusted padding for a more balanced size */
+    background-color: #ffcc00; /* Bright accent color for button */
+    color: #000; /* Dark text color for button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for background and scaling */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+button:hover {
+    background-color: #e6b800; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+button:active {
+    transform: scale(0.95); /* Slightly shrink when clicked */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Reduced shadow on active */
+}
+
+@media (max-width: 600px) {
+    .chat-container {
+        width: 90%; /* Responsive width */
+    }
+}
