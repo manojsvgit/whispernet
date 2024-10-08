@@ -2,6 +2,11 @@
 
 **WhisperNet** is a real-time anonymous chat application where users can send and receive messages without revealing their identity. The app features a simple UI and allows multiple users to communicate seamlessly over a network using Socket.IO.
 
+## Demo
+
+Check out the live demo of WhisperNet here: [WhisperNet Demo](https://whispernet-qq0p.onrender.com/)
+
+
 ## Features
 
 - **Anonymous Chat**: Users can chat without signing in or registering.
