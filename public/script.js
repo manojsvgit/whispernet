@@ -59,7 +59,8 @@ function appendSentMessage(message, username) {
     avatarDiv.textContent = username.charAt(0); // Use the first initial of the username
 
     const p = document.createElement("p");
-    p.textContent = message;
+    // Add spaces around the colon for better formatting
+    p.innerHTML = `<span class="username">${username} :</span> ${message}`; // Space before and after colon
 
     messageDiv.appendChild(avatarDiv);
     messageDiv.appendChild(p);
@@ -78,7 +79,8 @@ function appendReceivedMessage(message, username) {
     avatarDiv.textContent = username.charAt(0); // Use the first initial of the username
 
     const p = document.createElement("p");
-    p.textContent = message;
+    // Add spaces around the colon for better formatting
+    p.innerHTML = `<span class="username">${username} :</span> ${message}`; // Space before and after colon
 
     messageDiv.appendChild(avatarDiv);
     messageDiv.appendChild(p);
