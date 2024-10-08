@@ -1,72 +1,113 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #1a1a1a; /* Dark background */
-    color: #f2f2f2; /* Light text color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean, modern font */
+    background-color: #121212; /* Darker background for less strain on the eyes */
+    color: #e0e0e0; /* Slightly brighter text color for better readability */
     margin: 0;
     padding: 0;
+    line-height: 1.6; /* Increased line height for better text readability */
 }
 
 .chat-container {
-    max-width: 500px; /* Increased width */
-    margin: 50px auto;
-    background-color: #2a2a2a; /* Darker container background */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5); /* Softer shadow */
-    padding: 20px;
+    max-width: 500px; /* Maximum width of the chat container */
+    margin: 50px auto; /* Centered horizontally */
+    background-color: #2c2c2c; /* Darker container background for depth */
+    border-radius: 12px; /* More rounded corners for a softer look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Deeper shadow for emphasis */
+    padding: 25px; /* More padding for a spacious layout */
     display: flex;
     flex-direction: column; /* Flexbox layout */
     height: 80vh; /* Adjusted height */
 }
 
+/* Heading Styles */
 h1 {
     text-align: center;
-    color: #ffcc00; /* Bright accent color for heading */
-    margin-bottom: 20px; /* Space below the heading */
+    color: #ffd700; /* Gold color for a vibrant accent */
+    margin-bottom: 25px; /* Increased space below the heading */
+    font-size: 1.8rem; /* Increased font size for better visibility */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
 }
+
 
 /* Message Section */
 
 .messages {
     flex-grow: 1; /* Allow messages to grow */
-    border: 1px solid #444; /* Lighter border for dark theme */
-    border-radius: 5px;
+    border: 1px solid #555; /* Slightly lighter border for a modern look */
+    border-radius: 8px; /* Slightly more rounded corners */
     overflow-y: auto; /* Smooth scrolling */
-    padding: 15px;
-    margin-bottom: 10px;
-    background-color: #3b3b3b; /* Dark gray background for messages */
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* Inner shadow */
+    padding: 20px; /* Increased padding for a more spacious layout */
+    margin-bottom: 15px; /* Increased space below the messages */
+    background-color: #2d2d2d; /* Slightly darker gray background for better contrast */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7); /* Enhanced inner shadow */
     display: flex; /* Enable flexbox layout */
     flex-direction: column; /* Column layout for messages */
 }
 
+/* Individual Message Styles */
 .message {
     display: flex; /* Flex layout for each message */
     align-items: center; /* Center items vertically */
-    margin: 5px 0; /* Space between messages */
-    padding: 10px; /* Increased padding for better touch targets */
-    border-radius: 10px; /* More rounded message bubbles */
+    margin: 8px 0; /* Increased space between messages */
+    padding: 12px; /* Slightly increased padding for touch targets */
+    border-radius: 12px; /* More rounded message bubbles */
     position: relative; /* Allow positioning of avatar */
-    color: white; /* Default text color */
+    color: #ffffff; /* Default text color */
+    transition: background-color 0.3s, transform 0.2s; /* Transition for hover effects */
 }
 
+/* Message Text Styles */
 .message p {
     margin: 0; /* Remove default margins */
-    padding: 10px; /* Padding for message text */
-    border-radius: 10px; /* Round message bubble corners */
+    padding: 8px 12px; /* More padding for message text */
+    border-radius: 12px; /* Round message bubble corners */
+    background-color: inherit; /* Inherit background color from parent */
     transition: background-color 0.3s; /* Transition effect */
 }
 
-/* Different colors for sent and received messages */
+/* Sent Messages */
 .sent {
     background-color: #007bff; /* Blue for sent messages */
-    color: white;
     align-self: flex-end; /* Align to the right */
+    color: white; /* Ensure text is white for readability */
+    border-radius: 12px; /* More rounded corners for sent messages */
+    padding: 10px 15px; /* Added padding for better touch targets */
+    position: relative; /* Positioning for shadow effect */
+    transition: transform 0.2s ease, background-color 0.3s; /* Smooth transition effects */
 }
 
+/* Received Messages */
 .received {
     background-color: #444; /* Darker for received messages */
-    color: white;
     align-self: flex-start; /* Align to the left */
+    color: white; /* Ensure text is white for readability */
+    border-radius: 12px; /* More rounded corners for received messages */
+    padding: 10px 15px; /* Added padding for better touch targets */
+    position: relative; /* Positioning for shadow effect */
+    transition: transform 0.2s ease, background-color 0.3s; /* Smooth transition effects */
+}
+
+/* Hover Effects for Messages */
+.message:hover {
+    transform: translateY(-2px); /* Slightly lift the message on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover for depth */
+}
+
+.sent:hover p {
+    background-color: rgba(0, 123, 255, 0.8); /* Slightly darker blue on hover for sent messages */
+}
+
+.received:hover p {
+    background-color: rgba(68, 68, 68, 0.8); /* Slightly lighter on hover for received messages */
+}
+
+/* Optional: Message Text Styles */
+.sent p,
+.received p {
+    margin: 0; /* Remove default margins */
+    padding: 5px; /* Padding for message text */
+    border-radius: 10px; /* Round message bubble corners */
+    transition: background-color 0.3s; /* Transition effect */
 }
 
 

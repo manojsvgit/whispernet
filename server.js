@@ -42,7 +42,8 @@ io.on('connection', (socket) => {
         // Save the message to the database
         const message = new Message(msg);
         message.save().then(() => {
-            io.emit('chat message', msg); // Broadcast the message to all clients
+            // Broadcast the message to all clients except the sender
+            socket.broadcast.emit('chat message', msg); 
         });
     });
 
